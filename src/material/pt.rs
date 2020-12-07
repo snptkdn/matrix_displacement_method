@@ -1,4 +1,5 @@
 // TODO:should impl GenericType
+#[derive(Debug)]
 pub struct Pt{
     x: f64,
     y: f64
