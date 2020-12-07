@@ -3,5 +3,4 @@ pub enum Edge{
     edge_i,
     edge_j
 }
-pub mod pt;
-pub mod node;
+pub mod material;
