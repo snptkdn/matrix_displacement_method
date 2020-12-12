@@ -14,7 +14,7 @@ impl Node{
         &self.pt
     }
 
-    fn get_distance_to(&self, tar: Node) -> f64{
+  fn get_distance_to(&self, tar: Node) -> f64{
         self.pt.get_distace_to(tar.get_pt())
     }
 }
