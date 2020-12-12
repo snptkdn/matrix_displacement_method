@@ -18,7 +18,7 @@ impl<'a> Beam<'a> {
             Edge::edge_i => &self.i,
             Edge::edge_j => &self.j,
             _ => panic!("cant take a node.")
-        }
+            }
     }
 }
 
@@ -30,7 +30,7 @@ mod tests {
         use super::*;
         let node_i = Node::new(1, Pt::new(1.0, 4.0));
         let node_j = Node::new(2, Pt::new(5.0, 7.0));
-        let section = Section::new();
+        let section = Section::new(100.0, 10000.0, 10000.0, 0.0);
         let beam = Beam::new(1, &node_i, &node_j, section);
         assert_eq!(&node_i, beam.get_node(Edge::edge_i));
         assert_eq!(&node_j, beam.get_node(Edge::edge_j));
