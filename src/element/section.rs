@@ -6,7 +6,7 @@ pub struct Section {
 }
 
 impl Section {
-    pub fn new(A: f32, Iy: f32, Iz: f32, K: f32) -> Section {
+    pub fn new(A: f32, Iy: f32, Iz: f32, K: f32) -> Self {
         Section { A, Iy, Iz, K }
     }
 }
