@@ -14,7 +14,7 @@ impl Pt
         }
     }
 
-    pub fn get_distace_to(&self, tar: &Self) -> f64{
+    pub fn get_distance_to(&self, tar: &Self) -> f64{
         ((self.x - tar.x).powf(2f64) + (self.y - tar.y).powf(2f64)).sqrt()
     }
 }
@@ -26,7 +26,7 @@ mod tests {
         use super::*;
         let pt1 = Pt::new(1.0, 2.0);
         let pt2 = Pt::new(4.0, 6.0);
-        let dis = pt1.get_distace_to(&pt2);
+        let dis = pt1.get_distance_to(&pt2);
         assert_eq!(5.0 , dis);
     }
 }
