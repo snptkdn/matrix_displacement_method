@@ -3,4 +3,6 @@ pub enum Edge{
     edge_i,
     edge_j
 }
-pub mod element;
+pub mod material;
+pub mod manager;
+pub mod manager;
