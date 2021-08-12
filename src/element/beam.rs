@@ -2,6 +2,11 @@ use super::super::Edge;
 use super::node::*;
 use super::section::*;
 use super::material::*;
+use nalgebra as na;
+
+const SIZE_MATRIX: i32 = 12;
+type Matrix = na::SMatrix<f64, 12, 12>;
+
 pub struct Beam<'a> {
     num: i32,
     i: &'a Node,
@@ -25,6 +30,10 @@ impl<'a> Beam<'a> {
 
     pub fn get_length(&self) -> f64{
         self.i.get_distance_to(self.j)
+    }
+
+    pub fn get_rigid_matrix(&self) -> Matrix {
+        Matrix::zeros()
     }
 }
 
