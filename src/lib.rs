@@ -1,8 +1,6 @@
 /// edge Of material
 pub enum Edge{
-    edge_i,
-    edge_j
+    EdgeI,
+    EdgeJ,
 }
-pub mod material;
-pub mod manager;
-pub mod manager;
+pub mod element;

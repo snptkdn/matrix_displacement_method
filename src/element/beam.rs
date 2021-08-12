@@ -17,8 +17,8 @@ impl<'a> Beam<'a> {
 
     pub fn get_node(&self, edge: Edge) -> &Node {
         match edge {
-            Edge::edge_i => &self.i,
-            Edge::edge_j => &self.j,
+            Edge::EdgeI => &self.i,
+            Edge::EdgeJ => &self.j,
             _ => panic!("cant take a node.")
             }
     }
@@ -39,8 +39,8 @@ mod tests {
         let section = Section::new(100.0, 10000.0, 10000.0, 0.0);
         let material: Material = Default::default();
         let beam = Beam::new(1, &node_i, &node_j, &section, &material);
-        assert_eq!(&node_i, beam.get_node(Edge::edge_i));
-        assert_eq!(&node_j, beam.get_node(Edge::edge_j));
+        assert_eq!(&node_i, beam.get_node(Edge::EdgeI));
+        assert_eq!(&node_j, beam.get_node(Edge::EdgeJ));
         assert_eq!(5.0, beam.get_length());
     }
 }
