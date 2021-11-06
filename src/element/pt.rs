@@ -22,8 +22,8 @@ mod tests {
     #[test]
     fn get_distance() {
         use super::*;
-        let pt1 = Pt::new(1.0, 2.0,1.0);
-        let pt2 = Pt::new(4.0, 6.0,1.0);
+        let pt1 = Pt::new(1.0, 2.0, 1.0);
+        let pt2 = Pt::new(4.0, 6.0, 1.0);
         let dis1 = pt1.get_distace_to(&pt2);
         let dis2 = pt2.get_distace_to(&pt1);
         assert_eq!(5.0, dis1);

@@ -1,26 +1,26 @@
 use super::pt::*;
 #[derive(Debug)]
-pub struct Node{
+pub struct Node {
     num: i32,
-    pt : Pt,
+    pt: Pt,
 }
 
-impl Node{
-    pub fn new(num: i32, pt: Pt) -> Self{
-        Node{num, pt}
+impl Node {
+    pub fn new(num: i32, pt: Pt) -> Self {
+        Node { num, pt }
     }
 
-    fn get_pt(&self) -> &Pt{
+    fn get_pt(&self) -> &Pt {
         &self.pt
     }
 
-  pub fn get_distance_to(&self, tar: &Node) -> f64{
+    pub fn get_distance_to(&self, tar: &Node) -> f64 {
         self.pt.get_distace_to(tar.get_pt())
     }
 }
 
-impl std::cmp::PartialEq for Node{
-    fn eq(&self, tar: &Node) -> bool{
+impl std::cmp::PartialEq for Node {
+    fn eq(&self, tar: &Node) -> bool {
         &self.num == &tar.num
     }
 }
@@ -29,8 +29,8 @@ mod tests {
     #[test]
     fn get_distance() {
         use super::*;
-        let node1 = Node::new(1, Pt::new(1.0, 4.0,1.0));
-        let node2 = Node::new(2, Pt::new(5.0, 7.0,1.0));
-        assert_eq!(5.0 , node1.get_distance_to(&node2));
+        let node1 = Node::new(1, Pt::new(1.0, 4.0, 1.0));
+        let node2 = Node::new(2, Pt::new(5.0, 7.0, 1.0));
+        assert_eq!(5.0, node1.get_distance_to(&node2));
     }
 }

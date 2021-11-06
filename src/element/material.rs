@@ -1,13 +1,21 @@
 /// E is young's modulus
 /// G is elastic shear modulus
 pub struct Material {
-    E: f32,
-    G: f32,
+    E: f64,
+    G: f64,
 }
 
 impl Material {
-    pub fn new(E: f32, G: f32) -> Self {
+    pub fn new(E: f64, G: f64) -> Self {
         Material { E, G }
+    }
+
+    pub fn get_E(&self) -> f64 {
+        self.E
+    }
+
+    pub fn get_G(&self) -> f64 {
+        self.G
     }
 }
 
