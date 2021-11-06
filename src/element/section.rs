@@ -1,13 +1,29 @@
 pub struct Section {
-    A: f32,
-    Iy: f32,
-    Iz: f32,
-    K: f32,
+    A: f64,
+    Iy: f64,
+    Iz: f64,
+    K: f64,
 }
 
 impl Section {
-    pub fn new(A: f32, Iy: f32, Iz: f32, K: f32) -> Self {
+    pub fn new(A: f64, Iy: f64, Iz: f64, K: f64) -> Self {
         Section { A, Iy, Iz, K }
+    }
+
+    pub fn get_A(&self) -> f64 {
+        self.A
+    }
+
+    pub fn get_Iy(&self) -> f64 {
+        self.Iy
+    }
+
+    pub fn get_Iz(&self) -> f64 {
+        self.Iz
+    }
+
+    pub fn get_K(&self) -> f64 {
+        self.K
     }
 }
 
